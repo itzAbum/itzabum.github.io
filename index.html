@@ -1,49 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Computer Networking Project 1</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <title>Project 1 – Public Website</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
-    <header>
-        <h1>Computer Networking Project 1</h1>
-        <p>Spring 2026</p>
-        <p>Instructor: Roya Hosseini</p>
-    </header>
-
+  <header class="navbar">
+    <div class="logo">CN Project 1</div>
     <nav>
-        <a href="index.html">Home</a>
-        <a href="networking.html">Networking Concepts</a>
+      <a href="index.html" class="active">Home</a>
+      <a href="networking.html">Networking Concepts</a>
+      <a href="about.html">About</a>
     </nav>
+  </header>
 
-    <main>
-        <section>
-            <h2>Project Overview</h2>
-            <p>
-                This website demonstrates how networking concepts such as DNS,
-                IP addressing, and HTTPS are applied in real-world website deployment.
-            </p>
+  <main class="hero">
+    <section class="hero-content">
+      <h1>Build & Deploy a Public Website</h1>
+      <p>
+        “Our website is hosted publicly, DNS resolves the domain to an IP address,
+        and communication occurs over HTTPS using TCP/IP.”
+      </p>
+      <p class="subtitle">
+        Computer Networking – Spring 2026 • Project 1
+      </p>
+      <div class="cards">
+        <div class="card">
+          <h2>Team</h2>
+          <ul>
+            <li><strong>Student 1:</strong> Networking & DNS</li>
+            <li><strong>Student 2:</strong> Frontend & Design</li>
+            <li><strong>Student 3:</strong> Security & HTTPS</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h2>Project Goals</h2>
+          <p>
+            Demonstrate DNS, IP addressing, HTTP/HTTPS, and basic security
+            features on a real deployed website.
+          </p>
+        </div>
+        <div class="card">
+          <h2>Quick Links</h2>
+          <ul>
+            <li><a href="networking.html">Networking Concepts</a></li>
+            <li><a href="about.html">About / Contact</a></li>
+            <li><a href="https://github.com/your-username/your-repo" target="_blank">GitHub Repo</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
 
-            <blockquote>
-                “This website is hosted publicly, DNS resolves the domain to an IP address,
-                and communication occurs over HTTPS using TCP/IP.”
-            </blockquote>
-        </section>
-
-        <section>
-            <h2>Project Objective</h2>
-            <p>
-                The objective of this project is to build a publicly accessible website
-                and analyze the networking technologies that allow it to function.
-            </p>
-        </section>
-    </main>
-
-    <footer>
-        <p>© 2026 Computer Networking Project</p>
-    </footer>
-
+  <footer>
+    <p>© 2026 • Computer Networking Project 1</p>
+  </footer>
+  <script src="script.js"></script>
 </body>
 </html>
