@@ -23,17 +23,21 @@
 
 <section class="content">
     <h2>DNS Resolution</h2>
-    <p>This website is hosted on GitHub Pages. When a user enters <strong>yourusername.github.io</strong>, DNS resolves the domain to an IP address using GitHub’s DNS servers.</p>
+    <p>This website is hosted on GitHub Pages.When a user enters itzabum.github.io, DNS resolves the domain to GitHub Pages’ IP addresses. Running nslookup itzabum.github.io returned multiple IPv4 and IPv6 addresses, showing that GitHub uses a global CDN.</p>
 
     <p>Example command used:</p>
     <pre><code>nslookup itzabum.github.io</code></pre>
 
     <p><img src="nslookup" alt="DNS proof"></p>
+    
 
     <h2>IP Addressing</h2>
     <p>The DNS lookup returns an IPv4 and/or IPv6 address. This shows where the website is hosted on the internet.</p>
 
-    <p>Screenshot will go here.</p>
+    <p>From the screenshot above we can see:</p>
+    <p>IPv4: 185.199.108.153, 185.199.109.153, 185.199.110.153, 185.199.111.153</p>
+    <p>IPv6: 2606:50c0:8000::153, 2606:50c0:8001::153, 2606:50c0:8002::153, 2606:50c0:8003::153</p>
+    <p>GitHub Pages uses multiple addresses for redundancy and load balancing.</p>
 
     <h2>Protocols (HTTP/HTTPS)</h2>
     <p>This website uses <strong>HTTPS</strong>, meaning communication is encrypted using TLS.</p>
@@ -41,18 +45,21 @@
     <p>Using Developer Tools → Network tab, we can see:</p>
     <ul>
         <li>HTTPS request URL</li>
-        <li>Status code (200 OK)</li>
+        <li>Status code (304 Not Modified)</li>
         <li>Response headers</li>
     </ul>
 
-    <p>Screenshot will go here.</p>
+    <p>The website loads over HTTPS, meaning all communication is encrypted using TLS.</p>
+    <p>In the browser’s Network tab, the main request returned 304 Not Modified, which means the browser already had a cached copy of the page and the server confirmed it hasn’t changed.</p>
+
+    <p><img src="devtool" alt="DevTool proof"></p>
 
     <h2>Security Feature</h2>
     <p>GitHub Pages automatically enforces HTTPS, which protects data integrity and confidentiality.</p>
 </section>
 
 <footer>
-    <p>© 2026 Aiham – CN Project 1</p>
+    <p>Aiham – CN Project 1</p>
 </footer>
 
 </body>
