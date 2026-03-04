@@ -2,108 +2,58 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Networking Concepts</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
-        <h1>How Networking Makes Our Website Work</h1>
-    </header>
+<nav>
+    <h2>CN Project 1</h2>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="networking.html" class="active">Networking Concepts</a></li>
+        <li><a href="about.html">About</a></li>
+    </ul>
+</nav>
 
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="networking.html">Networking Concepts</a>
-    </nav>
+<header class="hero small">
+    <h1>Networking Concepts</h1>
+</header>
 
-    <main>
+<section class="content">
+    <h2>DNS Resolution</h2>
+    <p>This website is hosted on GitHub Pages. When a user enters <strong>yourusername.github.io</strong>, DNS resolves the domain to an IP address using GitHub’s DNS servers.</p>
 
-        <section>
-            <h2>1. DNS (Domain Name System)</h2>
-            <p>
-                This website is hosted using GitHub Pages under the domain:
-                <strong>https://itzabum.github.io</strong>
-            </p>
+    <p>Example command used:</p>
+    <pre><code>nslookup yourusername.github.io</code></pre>
 
-            <p>
-                When a user enters this domain in a browser, DNS resolves the domain
-                name to an IP address. The browser then connects to that IP address
-                using TCP and retrieves the website using HTTPS.
-            </p>
+    <p>Screenshot will go here.</p>
 
-            <h3>DNS Evidence</h3>
-            <pre>
-nslookup itzabum.github.io
-            </pre>
+    <h2>IP Addressing</h2>
+    <p>The DNS lookup returns an IPv4 and/or IPv6 address. This shows where the website is hosted on the internet.</p>
 
-            <p>
-                The command above resolves the domain name to an IPv4 address,
-                confirming that DNS is functioning correctly.
-            </p>
-        </section>
+    <p>Screenshot will go here.</p>
 
-        <section>
-            <h2>2. IP Addressing</h2>
-            <p>
-                The domain resolves to an IPv4 address provided by GitHub's
-                hosting infrastructure.
-            </p>
+    <h2>Protocols (HTTP/HTTPS)</h2>
+    <p>This website uses <strong>HTTPS</strong>, meaning communication is encrypted using TLS.</p>
 
-            <p>
-                IPv4 uses a 32-bit addressing format and enables communication
-                between the client and server over the Internet.
-            </p>
+    <p>Using Developer Tools → Network tab, we can see:</p>
+    <ul>
+        <li>HTTPS request URL</li>
+        <li>Status code (200 OK)</li>
+        <li>Response headers</li>
+    </ul>
 
-            <p>
-                This confirms that the website is publicly hosted and reachable.
-            </p>
-        </section>
+    <p>Screenshot will go here.</p>
 
-        <section>
-            <h2>3. Protocols (HTTP vs HTTPS)</h2>
-            <p>
-                This website uses HTTPS rather than HTTP. HTTPS encrypts communication
-                between the browser and server using TLS.
-            </p>
+    <h2>Security Feature</h2>
+    <p>GitHub Pages automatically enforces HTTPS, which protects data integrity and confidentiality.</p>
+</section>
 
-            <h3>Status Code</h3>
-            <p>
-                When inspected using browser Developer Tools, the site returns:
-                <strong>200 OK</strong>
-            </p>
-
-            <h3>Response Headers</h3>
-            <pre>
-HTTP/2 200 OK
-Content-Type: text/html
-Strict-Transport-Security: max-age=31536000
-            </pre>
-
-            <p>
-                The 200 OK status confirms the request was successful.
-                HTTPS ensures secure, encrypted communication over TCP/IP.
-            </p>
-        </section>
-
-        <section>
-            <h2>4. Security Implementation</h2>
-            <p>
-                GitHub Pages automatically enforces HTTPS.
-                If a user attempts to access the site using HTTP,
-                it redirects to HTTPS.
-            </p>
-
-            <p>
-                The Strict-Transport-Security header forces browsers
-                to always use HTTPS for secure communication.
-            </p>
-        </section>
-
-    </main>
-
-    <footer>
-        <p>© 2026 Computer Networking Project</p>
-    </footer>
+<footer>
+    <p>© 2026 Aiham – CN Project 1</p>
+</footer>
 
 </body>
 </html>
