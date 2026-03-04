@@ -54,8 +54,12 @@
 
     <p><img src="devtool" alt="DevTool proof"></p>
 
-    <h2>Security Feature</h2>
+    <h2>Security Features</h2>
     <p>GitHub Pages automatically enforces HTTPS, which protects data integrity and confidentiality.</p>
+
+    <h2>Response/Request Page</h2>
+    <p><img src="respnse" alt="Request/response proof"></p>
+    <p>The request and response headers show the metadata exchanged between my browser and the GitHub Pages server when loading my site. The response includes headers such as content-type: text/html, which tells the browser how to interpret the file, and strict-transport-security, which confirms that HTTPS is enforced. The presence of caching headers like etag and last-modified explains why my site returned a 304 Not Modified status code—GitHub Pages confirmed the file had not changed, so the browser used its cached version. These headers demonstrate that my site communicates securely over HTTPS and uses standard web protocols.</p>
 
     <h2>Summary</h2>
     <p>Our website is hosted publicly, DNS resolves the domain to an IP address, and communication occurs over HTTPS using TCP/IP.</p>
